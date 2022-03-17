@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <button @click="increase">+</button>
+    <span>{{counter}}</span>
+    <button @click="decrease">-</button>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+const vueApp = Vue.createApp({
+  data() {
+    return {counter:0}
+  },
+  methods:{
+    increase(){
+        this.counter++;
+    },
+    decrease(){
+        if(this.counter>0) this.counter--;
+    }
+  }
+}).mount('#app');
+</script>
+</body>

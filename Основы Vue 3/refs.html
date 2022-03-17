@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>$refs в Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <h2 ref="header">Hello world!</h2>
+    <button v-on:click="change">Change</button>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+Vue.createApp({
+    methods:{
+        change(){
+            this.$refs.header.innerText = "Welcome to Vue 3";
+        }
+    }
+})
+.mount('#app');
+</script>
+</body>
+</html>

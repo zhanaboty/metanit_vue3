@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <a v-bind:href="link" v-bind:title="title">{{text}}</a>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+Vue.createApp({
+  data() {
+    return { text: 'Google', title: 'google.com', link:'https://google.com'}
+  }
+}).mount('#app');
+</script>
+</body>
+</html>

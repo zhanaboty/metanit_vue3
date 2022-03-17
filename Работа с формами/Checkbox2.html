@@ -1,0 +1,15 @@
+<div id="app">
+          <input type="checkbox" v-model="light" true-value="on" false-value="off" />
+          <span v-if="light==='on'">Выключить</span>
+          <span v-else>Включить</span>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+    Vue.createApp({
+      data() {
+        return {
+            light: true
+        }
+      }
+    }).mount('#app');
+    </script>

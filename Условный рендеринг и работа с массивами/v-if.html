@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <p v-if="visible">Первый параграф</p>
+    <p>Второй параграф</p>
+    <button v-on:click="visible=!visible">{{visible?'Скрыть':'Показать'}}</button>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+Vue.createApp({
+  data() {
+    return { visible: true }
+  }
+}).mount('#app');
+</script>
+</body>
+</html>

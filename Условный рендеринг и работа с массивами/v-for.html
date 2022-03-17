@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="user in users">{{ user}}</li>
+    </ul>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+Vue.createApp({
+  data() {
+    return { users: ['Tom', 'Sam', 'Alice', 'Kate']}
+  }
+}).mount('#app');
+</script>
+</body>
+</html>

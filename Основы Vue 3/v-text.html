@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <div v-text="name"></div>
+    <div v-text="age"></div>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+const vueApp = Vue.createApp({
+  data() {
+    return { name: "Tom", age: 36 }
+  }
+}).mount('#app');
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <ul>
+      <li v-for="phone in phones">
+      <p>{{ phone }}</p>
+      </li>
+    </ul>
+    <button v-on:click="updateList">Обновить</button>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+Vue.createApp({
+  data() {
+    return { 
+        phones: ['iPhone 12', 'Galaxy S20', 'Nokia N9', 'Xiaomi Mi10']}
+  },
+  methods:{
+    updateList(){
+        this.phones = this.phones.slice(2,4);
+    }
+  }
+}).mount('#app');
+</script>
+</body>
+</html>

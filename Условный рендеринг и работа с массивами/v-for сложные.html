@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="user in users">
+            <p>Имя: {{user.name}}</p>
+            <p>Возраст: {{user.age}}</p>
+        </li>
+    </ul>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+Vue.createApp({
+  data() {
+    return { users: [
+                    {name:'Tom', age:22}, 
+                    {name:'Bob', age:31}, 
+                    {name: 'Sam', age:28}
+            ]}
+  }
+}).mount('#app');
+</script>
+</body>
